@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="food">
+
+	<!-- 메뉴판 리스트 -->
+	<select id="select" resultType="com.javaex.vo.FoodVo">
+		<![CDATA[	
+			select f_no fNo, f_name fName, f_price fPrice, filePath, orgName, saveName, 
+				   fileSize, f_accumulated_points fPoint
+			from foodstore_table
+		]]>
+	</select>
+
+	<!-- 사진 등록 담기 -->
+	<insert id="foodInsert" parameterType="com.javaex.vo.FoodVo">
+		<![CDATA[
+			insert into foodstore_table
+			values(null, null, null, #{ filePath }, #{ orgName }, 
+			#{ saveName }, #{ fileSize }, null, null)
+		]]>
+	</insert>
+</mapper>
