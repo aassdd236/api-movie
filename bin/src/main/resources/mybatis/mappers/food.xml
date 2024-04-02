@@ -7,7 +7,7 @@
 	<select id="select" resultType="com.javaex.vo.FoodVo">
 		<![CDATA[	
 			select f_no fNo, f_name fName, f_price fPrice, filePath, orgName, saveName, 
-				   fileSize
+				   fileSize, f_accumulated_points fPoint
 			from foodstore_table
 		]]>
 	</select>

@@ -9,7 +9,6 @@ public class FoodVo {
 	private String orgName;
 	private String saveName;
 	private long fileSize;
-	private int fPoint;
 	private String fRemarks;
 
 	public FoodVo() {
@@ -26,8 +25,7 @@ public class FoodVo {
 	}
 
 
-	public FoodVo(int fNo, String fName, int fPrice, String filePath, String orgName, String saveName, long fileSize,
-			int fPoint, String fRemarks) {
+	public FoodVo(int fNo, String fName, int fPrice, String filePath, String orgName, String saveName, long fileSize, String fRemarks) {
 		super();
 		this.fNo = fNo;
 		this.fName = fName;
@@ -36,7 +34,6 @@ public class FoodVo {
 		this.orgName = orgName;
 		this.saveName = saveName;
 		this.fileSize = fileSize;
-		this.fPoint = fPoint;
 		this.fRemarks = fRemarks;
 	}
 
@@ -96,14 +93,6 @@ public class FoodVo {
 		this.fileSize = fileSize;
 	}
 
-	public int getfPoint() {
-		return fPoint;
-	}
-
-	public void setfPoint(int fPoint) {
-		this.fPoint = fPoint;
-	}
-
 	public String getfRemarks() {
 		return fRemarks;
 	}
@@ -115,7 +104,7 @@ public class FoodVo {
 	@Override
 	public String toString() {
 		return "FoodVo [fNo=" + fNo + ", fName=" + fName + ", fPrice=" + fPrice + ", filePath=" + filePath
-				+ ", orgName=" + orgName + ", saveName=" + saveName + ", fileSize=" + fileSize + ", fPoint=" + fPoint
+				+ ", orgName=" + orgName + ", saveName=" + saveName + ", fileSize=" + fileSize
 				+ ", fRemarks=" + fRemarks + "]";
 	}
 

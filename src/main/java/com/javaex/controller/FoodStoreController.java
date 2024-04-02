@@ -17,7 +17,7 @@ public class FoodStoreController {
 	private FoodStoreService foodStoreService;
 	
 	//메뉴 리스트
-	@GetMapping("/api/list")
+	@GetMapping("/api/food/list")
 	public JsonResult list() {
 		System.out.println("foodStoreService.list()");
 
